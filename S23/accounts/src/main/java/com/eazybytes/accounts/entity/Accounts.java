@@ -10,14 +10,14 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Accounts extends BaseEntity {
-
-    @Column(name = "customer_id")
-    private Long customerId;
-
     @Column(name = "account_number")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long accountNumber;
+
+    @Column(name = "customer_id")
+    private Long customerId;
+
 
     @Column(name = "account_type")
     private String accountType;
